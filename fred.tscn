@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ds4v10ej1g3sr"]
+
+[ext_resource type="Script" uid="uid://cub58aqdihmnh" path="res://fred.gd" id="1_uoe1y"]
+[ext_resource type="Texture2D" uid="uid://b7xarmlbfjm8l" path="res://perfect.png" id="2_nrkb6"]
+[ext_resource type="Script" uid="uid://lpxv4foqllj1" path="res://tounge.gd" id="3_bwymb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bwymb"]
+radius = 142.79005
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwymb"]
+size = Vector2(1, 1)
+
+[node name="Fred" type="CharacterBody2D" unique_id=458969070]
+script = ExtResource("1_uoe1y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1446080926]
+shape = SubResource("CircleShape2D_bwymb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1284936484]
+texture = ExtResource("2_nrkb6")
+
+[node name="Tounge" type="Area2D" parent="." unique_id=2086296384]
+script = ExtResource("3_bwymb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tounge" unique_id=1510075701]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_bwymb")
+
+[node name="ColorRect" type="ColorRect" parent="Tounge" unique_id=461231519]
+offset_left = -1.0
+offset_top = -1.0
+color = Color(1, 0, 1, 1)
