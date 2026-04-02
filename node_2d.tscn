@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://biqt0vnqcg13v"]
+
+[ext_resource type="Script" uid="uid://dmkfhd8tt43ox" path="res://Player_Script_working.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://djc3s1almh76h" path="res://Images/perfect.png" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://3v15jwq3s72c" path="res://tongue.tscn" id="3_epypp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_epypp"]
+radius = 47.095646
+
+[node name="player" type="CharacterBody2D" unique_id=1871801319]
+script = ExtResource("1_0e48y")
+
+[node name="PlayerLogo" type="Sprite2D" parent="." unique_id=1930844483]
+position = Vector2(-12, 15)
+scale = Vector2(0.49060172, 0.52395976)
+texture = ExtResource("2_0e48y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=360759961]
+shape = SubResource("CircleShape2D_epypp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=586193681]
+zoom = Vector2(0.7, 0.7)
+
+[node name="tongue" parent="." unique_id=789359925 instance=ExtResource("3_epypp")]
+position = Vector2(-14, 0)

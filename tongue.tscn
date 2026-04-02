@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://3v15jwq3s72c"]
+
+[ext_resource type="Script" uid="uid://thdxvjxwvau1" path="res://tongue_script.gd" id="1_sc3er"]
+[ext_resource type="Texture2D" uid="uid://30cofcjawsy7" path="res://Images/Tongue_no_bg.png" id="1_vu47e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntcr7"]
+size = Vector2(130.5, 11)
+
+[node name="tongue" type="Area2D" unique_id=789359925]
+script = ExtResource("1_sc3er")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=978851095]
+position = Vector2(-57, 1)
+shape = SubResource("RectangleShape2D_ntcr7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2092024053]
+position = Vector2(-62.000008, -5)
+scale = Vector2(0.19488597, 0.19923079)
+texture = ExtResource("1_vu47e")
